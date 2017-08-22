@@ -5,4 +5,14 @@
   var ctx = canvas.getContext('2d');
   ctx.fillStyle = 'green';
   ctx.fillRect(10, 10, 100, 100);
+
+  window.addEventListener("gamepadconnected", function(e) {
+    document.write(`Gamepad connected at index
+      ${e.gamepad.index}:
+      ${e.gamepad.id},
+      ${e.gamepad.buttons.length},
+      ${e.gamepad.axes.length}`);
+  });
+
+
 </script>

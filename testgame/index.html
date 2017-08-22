@@ -1,10 +1,13 @@
 <canvas></canvas>
+<script src="choc.js"></script>
 
 <script>
   var canvas = document.querySelector('canvas');
   var ctx = canvas.getContext('2d');
   ctx.fillStyle = 'green';
   ctx.fillRect(10, 10, 100, 100);
+
+  document.write(choc.graphics.rectangle);
 
   document.addEventListener("gamepadconnected", function(e) {
     document.write(`Gamepad connected at index
@@ -13,6 +16,4 @@
       ${e.gamepad.buttons.length},
       ${e.gamepad.axes.length}`);
   });
-
-
 </script>

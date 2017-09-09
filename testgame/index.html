@@ -26,4 +26,20 @@
       gp.index, gp.id,
       gp.buttons.length, gp.axes.length);
   });
+
+  function game() {
+    if (gp) {
+      var status = "length: " gp.buttons.length + "/n";
+
+      for (var i = 0; i < gp.buttons.length; i++) {
+        status += gp.buttons[i].value + "/n"
+      }
+
+      document.write(status);
+    }
+
+    requestAnimationFrame(game);
+  }
+
+  game();
 </script>

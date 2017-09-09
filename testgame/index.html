@@ -18,6 +18,8 @@
   ctx.fillStyle = 'green';
   //ctx.fillRect(10, 10, 100, 100);
 
+  doucment.write("hello, world");
+
   window.addEventListener("gamepadconnected", function(e) {
     gp = navigator.getGamepads()[e.gamepad.index];
     console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",

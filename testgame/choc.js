@@ -1,4 +1,4 @@
-choc = {
+var choc = {
   internal = {
     graphics = {}
   },

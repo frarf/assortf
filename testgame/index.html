@@ -1,14 +1,18 @@
-<canvas></canvas>
+<canvas width=1280 height=720></canvas>
 
-<script type="module">
-  import {boop} from './test.js';
+<script>
+  var indexToButton = {
+
+  };
+
+  var m_gamepad;
+  
+  var gamepad = {};
 
   var canvas = document.querySelector('canvas');
   var ctx = canvas.getContext('2d');
   ctx.fillStyle = 'green';
   ctx.fillRect(10, 10, 100, 100);
-
-  console.log(boop());
 
   document.addEventListener("gamepadconnected", function(e) {
     document.write(`Gamepad connected at index

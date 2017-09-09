@@ -1,12 +1,16 @@
 <canvas width=1280 height=720></canvas>
 
+<style>
+
+</style>
+
 <script>
   var indexToButton = {
 
   };
 
-  var m_gamepad;
-  
+  var gp;
+
   var gamepad = {};
 
   var canvas = document.querySelector('canvas');
@@ -15,10 +19,9 @@
   ctx.fillRect(10, 10, 100, 100);
 
   document.addEventListener("gamepadconnected", function(e) {
-    document.write(`Gamepad connected at index
-      ${e.gamepad.index}:
-      ${e.gamepad.id},
-      ${e.gamepad.buttons.length},
-      ${e.gamepad.axes.length}`);
+    gp = navigator.getGamepads()[e.gamepad.index];
+    document.write("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+      gp.index, gp.id,
+      gp.buttons.length, gp.axes.length);
   });
 </script>
